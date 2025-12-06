@@ -4,35 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wetter App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>Paris</h1>
-        <p>
-          Saturday 18:31, broken clouds <br />
-          Humidity: 87%, Wind: 4.63km/h
-        </p>
-      </div>
-      <div>⛅11 °C</div>
-    </main>
-    <footer>
-      Coded by
-      <a href="https://github.com/schnattiba1" target="_blank">Chanel Chinedu</a
-      >, is open-sourced on
-      <a href="https://github.com/schnattiba1/wetter-app" target="_blank"
-        >GitHub</a
-      >
-      and website
-      <a href="https://wetter-forecast-shecodes.netlify.app" target="_blank"
-        >hosted on Netlify</a
-      >
-    </footer>
+    <div class="weather-container">
+      <header>
+        <form>
+          <input type="search" placeholder="Enter a city..." required />
+          <input type="submit" value="Search" />
+        </form>
+      </header>
+      <main>
+        <div>
+          <h1>Paris</h1>
+          <p>
+            Saturday 18:31, broken clouds <br />
+            Humidity: 87%, Wind: 4.63km/h
+          </p>
+        </div>
+        <div>⛅11 °C</div>
+      </main>
+      <footer>
+        Coded by
+        <a href="https://github.com/schnattiba1" target="_blank"
+          >Chanel Chinedu</a
+        >, is open-sourced on
+        <a href="https://github.com/schnattiba1/wetter-app" target="_blank"
+          >GitHub</a
+        >
+        and website
+        <a href="https://wetter-forecast-shecodes.netlify.app" target="_blank"
+          >hosted on Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
