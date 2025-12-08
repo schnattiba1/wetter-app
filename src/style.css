@@ -71,6 +71,22 @@ main {
   display: flex;
 }
 
+.weather-icon {
+  font-size: 44px;
+  margin-top: 22px;
+}
+
+.weather-temperature-value {
+  font-size: 88px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.weather-unit {
+  margin-top: 16px;
+  font-size: 28px;
+}
+
 footer {
   border-top: #f9f7fe 1px solid;
   padding: 30px 0 0 0;
