@@ -67,6 +67,10 @@ main {
   color: #f65282;
 }
 
+.weather-wrapper {
+  display: flex;
+}
+
 footer {
   border-top: #f9f7fe 1px solid;
   padding: 30px 0 0 0;
