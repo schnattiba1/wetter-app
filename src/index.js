@@ -1,9 +1,43 @@
 function updateWeather(response) {
   let weatherTemperature = document.querySelector(".weather-temperature-value");
-  currentTemperature = Math.round(response.data.temperature.current);
   let city = document.querySelector("#weather-city");
+  let description = document.querySelector("#description");
+  let currentTemperature = Math.round(response.data.temperature.current);
+  let descriptionElement = response.data.condition.description;
+  let humidity = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#wind");
+  let timeElement = document.querySelector("#time");
+
+  let date = new Date(response.data.time * 1000);
+
+  timeElement.innerHTML = formateDate(date);
+  windSpeed.innerHTML = response.data.wind.speed + "km/h";
+  humidity.innerHTML = response.data.temperature.humidity + "%";
+  description.innerHTML = descriptionElement;
   city.innerHTML = response.data.city;
   weatherTemperature.innerHTML = currentTemperature;
+}
+
+function formateDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let day = weekDays[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
@@ -20,5 +54,3 @@ function handleSearch(event) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSearch);
-
-searchCity("Seoul");
